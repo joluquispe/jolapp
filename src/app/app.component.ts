@@ -12,7 +12,7 @@ export class AppComponent {
   btnDisabled = true;
   person = {
     name : 'Joselu',
-    age  : 85,
+    age  : 71,
     avatar : 'https://source.unsplash.com/random'
   }
 
@@ -23,4 +23,15 @@ export class AppComponent {
   increaseAge(){
     this.person.age += 1;
   }
+
+  onScrooll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
+
+  chageName(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.person.name = element.value;
+  }
+
 }

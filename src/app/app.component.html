@@ -3,6 +3,11 @@
 <button (click)="toggleButton()">Toggle Button</button>
 <p>Edad {{ person.age }} </p>
 <button (click)="increaseAge()">Age++</button>
+<div class="box" (scroll)="onScrooll($event)">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint omnis temporibus eos a laborum error sapiente tenetur perspiciatis dolor quo nostrum non numquam ea quas voluptates facere, rerum alias quia? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quaerat rem illum dolor inventore deserunt dolorum exercitationem, fuga, hic perspiciatis recusandae dicta, culpa iste ratione minima. Impedit illo asperiores libero? </p>
+</div>
+<p>Nombre {{ person.name }} </p>
+<input type="text" [value]="person.name" (keyup)="chageName($event)">
 <hr/>
 <h1>Propiedades</h1>
 <button [disabled]="btnDisabled">Enviar</button>
